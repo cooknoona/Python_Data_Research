@@ -85,3 +85,46 @@ print(arr1 + arr2)
 print(arr1 - arr2)
 print(arr1 * arr2)
 print(arr1 / arr2)
+# 통게 연산
+arr3 = np.arange(10)
+print(f"합계 : {arr3.sum()}, 평균 : {arr3.mean()}")
+print(f"표준편차 : {arr3.std()}, 분산 : {arr3.var()}")
+print(f"최솟값 : {arr3.min()}, 최댓값 : {arr3.max()}")
+
+arr4 = np.array([9, 8, 7, 2, 3, 4, 6])
+print(np.sort(arr4))  # 오름차순 정렬
+print(np.argsort(arr4))  # 정렬된 인덱스 반환
+
+arr5 = np.array([1,2,3,4,5])
+
+#인덱싱
+print(arr5[0])
+print(arr5[2])
+# 슬라이싱
+print(arr5[1:4]) #[2,3,4]
+
+# 1번 문제 : 1 부터 10까지의 숫자로 이루어진 1차원 배열을 생성하고, 모든 요소에 5를 더한 결과를 출력하세요.
+
+test1 = np.arange(1, 11, 5)
+print(f"5를 더한 1차원 배열: {test1}")
+
+# 2번 문제 : 1부터 9 까지의 숫자를 사용해 3X3 크기의 2차원 배열을 생성하고 출력하세요.
+
+test2 = np.arange(1, 10).reshape(3, 3)
+print(f"2차원 배열: {test2}")
+
+# 3번 문제 : 1부터 20 까지의 숫자로 이루어진 배열을 생성하고, 다음을 계산 하세요.
+# 1. 배열의 합계
+# 2. 배열의 평균
+# 3. 배열의 최대값과 최소값
+
+test3 = np.arange(1, 20)
+print(f"합게 : {test3.sum()}")
+print(f"평균 : {test3.mean()}")
+print(f"최소 값 : {test3.min()}, 최대 값 : {test3.max()}")
+
+# 4번 문제 : 0에서 100 사이의 난수를 10개 생성하고, 50 이상인 값을 출력
+
+test4 = np.random.randint(1, 101, 10)
+print(f"난수 값: {test4[test4 > 50]}")
+print(f"난수 값의 갯수: {test4[test4 > 50].shape}")
